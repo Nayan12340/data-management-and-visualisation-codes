@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import random
+
+data = []
+
+fig, ax = plt.subplots()
+
+def update(frame):
+    data.append(random.randint(1, 10))
+    ax.clear()
+    ax.hist(data, bins=5, color='skyblue', edgecolor='black')
+    ax.set_title("Dynamic Histogram")
+    ax.set_xlabel("Value")
+    ax.set_ylabel("Frequency")
+
+ani = animation.FuncAnimation(fig, update, interval=1000)
+
+plt.show()
