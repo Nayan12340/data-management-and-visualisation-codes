@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+import random
+import time
+
+
+fig, ax = plt.subplots()
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+ax.set_title("Dynamic Scatter Plot (Manual Update)")
+ax.set_xlabel("X Axis")
+ax.set_ylabel("Y Axis")
+
+x_data = []
+y_data = []
+
+for _ in range(10): 
+    new_x = random.uniform(0, 10)
+    new_y = random.uniform(0, 10)
+    
+    x_data.append(new_x)
+    y_data.append(new_y)
+    
+    ax.clear() 
+    ax.scatter(x_data, y_data, color='blue')
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
+    ax.set_title("Dynamic Scatter Plot (Manual Update)")
+    ax.set_xlabel("X Axis")
+    ax.set_ylabel("Y Axis")
+    
+    plt.pause(1) 
+
+plt.show()

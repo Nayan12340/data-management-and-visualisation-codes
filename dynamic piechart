@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import random
+import time
+
+labels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+fig, ax = plt.subplots()
+
+for _ in range(5): 
+    sizes = [random.randint(10, 50) for _ in labels]
+
+    ax.clear()
+    ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+    ax.set_title("Dynamic Pie Chart (Manual Update)")
+    
+    plt.pause(1) 
+
+plt.show()

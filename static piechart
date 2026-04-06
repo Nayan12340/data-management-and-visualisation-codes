@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+
+# Sample data
+sizes = [25, 35, 20, 20]
+labels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+# Create pie chart
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.title("Simple Pie Chart")
+
+plt.show()
